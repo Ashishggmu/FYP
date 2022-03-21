@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDashboard.CheckOutActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/confirmLL"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="@dimen/small_spacing"
+                android:background="@drawable/rectangle_box"
+                android:backgroundTint="#FFFFFF"
+                android:padding="4dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                app:tint="@color/orange" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="start"
+
+                android:text="Order Details"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/normal_spacing"
+            android:paddingTop="@dimen/small_spacing"
+            android:paddingEnd="@dimen/normal_spacing"
+            android:text="My Cart"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/allProductsRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/normal_spacing"
+            android:paddingBottom="@dimen/normal_spacing"
+            android:paddingStart="@dimen/normal_spacing"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_spacing"
+            android:orientation="horizontal"
+            android:padding="@dimen/large_spacing">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:" />
+
+            <TextView
+                android:id="@+id/totalTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Rs. 1100"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal_spacing"
+            android:paddingStart="@dimen/normal_spacing"
+            android:paddingTop="@dimen/small_spacing"
+            android:paddingEnd="@dimen/normal_spacing"
+            android:text="Payment Method"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/cash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="?android:attr/listChoiceIndicatorMultiple"
+                android:text="Cash"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/khalti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="?android:attr/listChoiceIndicatorMultiple"
+                android:text="Khalti"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/confirmLL"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/medium_spacing"
+        android:background="@drawable/rectangle_box"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="@dimen/normal_spacing"
+            android:src="@drawable/ic_baseline_shopping_bag_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Order"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <com.khalti.widget.KhaltiButton
+       android:visibility="gone"
+        android:id="@+id/khaltiConfirmButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:button_style="khalti"
+        android:layout_margin="@dimen/medium_spacing"
+      />
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserDashboard.HomeFragment"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="My Cart"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/emptyCartMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Sorry, Your cart is empty!!"
+        android:visibility="gone"
+        />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/refreshHome1">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:id="@+id/cart" />
+
+
+
+            <Button
+                android:id="@+id/checkout"
+                android:layout_width="373dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center"
+                android:padding="20dp"
+                android:visibility="gone"
+                android:text="Check out" />
+
+
+
+
+        </LinearLayout>
+
+
+
+        </ScrollView>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

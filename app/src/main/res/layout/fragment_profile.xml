@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UserDashboard.ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+    //this is for upper profile
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/orange"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/face" />
+            <TextView
+                android:id="@+id/full_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/profile_image"
+                android:fontFamily="casual"
+                android:text="Ashish Poudel"
+                android:textColor="#fff"
+                android:includeFontPadding="false"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/full_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:fontFamily="casual"
+                android:includeFontPadding="false"
+                android:text="poudelashish2058@gmail.com"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+    // this is for card view design
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="-55dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardBackgroundColor="@color/orange"
+                android:elevation="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/house"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/house"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30dp"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@id/house"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="About Us"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+
+
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:paddingTop="20dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Email"
+        android:clickable="false"
+        android:tooltipText="Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/email"
+            android:enabled="false"
+            android:drawablePadding="10dp"
+            android:text="poudelashish2058@gmail.com" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Full Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/username_vector"
+            android:drawablePadding="10dp"
+            android:text="Ashish Poudel"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Phone Number">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/phone"
+            android:drawablePadding="10dp"
+            android:text="+977-9806534215"
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="monospace"
+        android:paddingLeft="10dp"
+        android:layout_margin="20dp"
+        android:paddingRight="10dp"
+        android:text="Update"
+        android:textStyle="bold"/>
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="monospace"
+        android:paddingLeft="10dp"
+        android:layout_margin="20dp"
+        android:paddingRight="10dp"
+        android:text="Logout"
+        android:textStyle="bold"/>
+
+</LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
