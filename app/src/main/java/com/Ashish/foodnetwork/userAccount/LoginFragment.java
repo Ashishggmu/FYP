@@ -21,6 +21,7 @@ import com.Ashish.foodnetwork.Api.ApiClient;
 import com.Ashish.foodnetwork.MainActivity;
 import com.Ashish.foodnetwork.R;
 import com.Ashish.foodnetwork.UserDashboard.HomeActivity;
+import com.Ashish.foodnetwork.admin.AdminActivity;
 import com.Ashish.foodnetwork.utils.Constants;
 import com.Ashish.foodnetwork.utils.SharePrefrenceUtils;
 import com.Ashish.foodnetwork.utils.response.LoginResponse;
@@ -97,14 +98,29 @@ public class LoginFragment extends Fragment {
 
                     LoginResponse loginResponse= response.body();
                     if(!loginResponse.getError()){
-                        Intent intent = new Intent(getActivity(),HomeActivity.class);
+
+                        if (loginResponse.getIsAdmin()==true){
+                            Intent intent = new Intent(getActivity(),HomeActivity.class);
+                            Toast.makeText(getActivity(),"You have logged in successfully", Toast.LENGTH_LONG).show();
+                            startActivity(intent);
+                        }else{
+                            Intent intent = new Intent(getActivity(), AdminActivity.class);
+                            Toast.makeText(getActivity(),"You have logged in as admin successfully", Toast.LENGTH_LONG).show();
+                            startActivity(intent);
+                        }
+
                         SharePrefrenceUtils.setStringPreference(getContext(), Constants.API_KEY,loginResponse.getApiKey());
                         SharePrefrenceUtils.setStringPreference(getContext(), Constants.USER_ID,loginResponse.getUserId()+"");
-                        Toast.makeText(getActivity(),"You have logged in succesfully", Toast.LENGTH_LONG).show();
-                        startActivity(intent);
+                        SharePrefrenceUtils.setStringPreference(getContext(), Constants.Full_name, loginResponse.getFullName());
+                        SharePrefrenceUtils.setStringPreference(getContext(),Constants.Email_ID, loginResponse.getEmail());
+                        SharePrefrenceUtils.setStringPreference(getContext(),Constants.Phone,loginResponse.getPhoneNumber()+"");
+                        SharePrefrenceUtils.setBooleanPreference(getContext(),Constants.IS_ADMIN, loginResponse.getIsAdmin());
+
                         getActivity().finish();
                         SharePrefrenceUtils.setBooleanPreference(getContext(), Constants.IS_LOGIN_KEY,true);
 
+                    }else{
+                        Toast.makeText(getActivity(),"You have entered email or password incorrect!!!!", Toast.LENGTH_LONG).show();
                     }
                 }
             }

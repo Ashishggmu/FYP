@@ -4,6 +4,9 @@
     package="com.Ashish.foodnetwork">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +16,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodNetwork"
         tools:replace="android:theme">
+        <activity
+            android:name=".UserDashboard.TermsandConditionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.addCategory.ListCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserDashboard.AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.products.ListProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.addProduct.AddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserDashboard.AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserDashboard.OrderHistoryDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserDashboard.OrderCompleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserDashboard.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminActivity"
+            android:exported="false" />
         <activity
             android:name=".UserDashboard.CheckOutActivity"
             android:exported="false" />

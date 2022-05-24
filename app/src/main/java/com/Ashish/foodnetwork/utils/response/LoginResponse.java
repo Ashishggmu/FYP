@@ -22,6 +22,9 @@ public class LoginResponse {
     @SerializedName("api_key")
     @Expose
     private String apiKey;
+    @SerializedName("is_admin")
+    @Expose
+    private Boolean isAdmin;
 
     public Boolean getError() {
         return error;
@@ -69,5 +72,13 @@ public class LoginResponse {
 
     public void setApiKey(String apiKey) {
         this.apiKey = apiKey;
+    }
+
+    public Boolean getIsAdmin() {
+        return isAdmin;
+    }
+
+    public void setIsAdmin(Boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
 }

@@ -27,10 +27,7 @@ public class SignUpFragment extends Fragment {
 
     TextView loginUnLetter;
     Button singupbtn;
-    TextView password;
-    TextView email;
-    TextView phone;
-    TextView fullName;
+    TextView password,email,phone,fullName;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -92,6 +89,9 @@ public class SignUpFragment extends Fragment {
                         Toast.makeText(getActivity(),registerResponse.getMessage(), Toast.LENGTH_SHORT).show();
                         Intent intent= new Intent(getActivity(), UserAccountActivity.class);
                         startActivity(intent);
+                    }
+                    else{
+                        Toast.makeText(getActivity(), "Email already exists!",Toast.LENGTH_SHORT).show();
                     }
                 }
             }

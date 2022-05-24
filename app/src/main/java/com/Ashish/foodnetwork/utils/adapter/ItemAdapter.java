@@ -49,8 +49,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
         FoodResponseData foodResponseData = data.get(position);
         holder.foodname.setText(foodResponseData.getFoodName());
         Picasso.get().load(foodResponseData.getFoodImg()).into(holder.foodimage);
-        holder.quantity.setText(foodResponseData.getFoodQuantity()+"");
-        holder.rate.setText(foodResponseData.getFoodPrice()+"");
+        holder.quantity.setText("Available: "+foodResponseData.getFoodQuantity()+"");
+        holder.rate.setText("Rs. "+foodResponseData.getFoodPrice()+"");
     }
 
     @Override

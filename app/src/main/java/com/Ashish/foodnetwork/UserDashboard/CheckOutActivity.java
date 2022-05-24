@@ -1,20 +1,19 @@
 package com.Ashish.foodnetwork.UserDashboard;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,8 +21,8 @@ import com.Ashish.foodnetwork.Api.ApiClient;
 import com.Ashish.foodnetwork.R;
 import com.Ashish.foodnetwork.utils.Constants;
 import com.Ashish.foodnetwork.utils.SharePrefrenceUtils;
-import com.Ashish.foodnetwork.utils.adapter.CartAdapter;
 import com.Ashish.foodnetwork.utils.adapter.CheckoutAdapter;
+import com.Ashish.foodnetwork.utils.response.Address;
 import com.Ashish.foodnetwork.utils.response.CartResponse;
 import com.Ashish.foodnetwork.utils.response.CartResponseData;
 import com.Ashish.foodnetwork.utils.response.FoodResponse;
@@ -46,10 +45,11 @@ public class CheckOutActivity extends AppCompatActivity  {
     RecyclerView allProductsRV;
     CheckoutAdapter checkoutAdapter;
     List<CartResponseData> cartList;
-    TextView totalTV;
+    TextView totalTV, emptyAddress, cityStreet, province;
     RadioButton cash, khalti;
-    LinearLayout confirmOrder;
+    LinearLayout confirmOrder,addressLL;
     KhaltiButton khaltiButton;
+    Address addressData;
     ImageView back;
     int totalAmount=0;
     long totalAmountInPaisa=0;
@@ -65,6 +65,11 @@ public class CheckOutActivity extends AppCompatActivity  {
         cash=  findViewById(R.id.cash);
         khalti=  findViewById(R.id.khalti);
         confirmOrder=findViewById(R.id.confirmLL);
+        emptyAddress=findViewById(R.id.emptyAddressTv);
+        addressLL=findViewById(R.id.addressLL);
+        cityStreet=findViewById(R.id.cityStreetTV);
+        province=findViewById(R.id.provinceTV);
+
         back=findViewById(R.id.backIv);
 
 
@@ -75,6 +80,20 @@ public class CheckOutActivity extends AppCompatActivity  {
                 finish();
             }
         });
+        addressLL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),AddressActivity.class);
+                startActivityForResult(intent,1);
+            }
+        });
+        emptyAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),AddressActivity.class);
+                startActivityForResult(intent,1);
+            }
+        });
 
         khaltiButton= (KhaltiButton) findViewById(R.id.khaltiConfirmButton);
 
@@ -83,9 +102,12 @@ public class CheckOutActivity extends AppCompatActivity  {
         confirmOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(cash.isChecked()){
-                    confirmOrder("Cash", 0);
+                if(cash.isChecked()&&addressData!=null){
+                    confirmOrder("Cash", 0,addressData.getId());
 
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Please select address !",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -133,9 +155,9 @@ public class CheckOutActivity extends AppCompatActivity  {
 
     }
 
-    private void confirmOrder(String pay_method, int pay_status){
+    private void confirmOrder(String pay_method, int pay_status,int address_id){
         Call<FoodResponse> confirmOrderCall= ApiClient.getApiServices()
-                .make_order(SharePrefrenceUtils.getStringPreference(getApplicationContext(),Constants.API_KEY),pay_method,pay_status);
+                .make_order(SharePrefrenceUtils.getStringPreference(getApplicationContext(),Constants.API_KEY),pay_method,pay_status,address_id);
 
         confirmOrderCall.enqueue(new Callback<FoodResponse>() {
             @Override
@@ -144,7 +166,7 @@ public class CheckOutActivity extends AppCompatActivity  {
                     if(!response.body().getError()){
                         CartFragment.IS_CART_CHANGED=true;
                         Toast.makeText(getApplicationContext(), "Order Success", Toast.LENGTH_LONG).show();
-                        Intent intent=new Intent(CheckOutActivity.this,HomeActivity.class);
+                        Intent intent=new Intent(CheckOutActivity.this,OrderCompleteActivity.class);
                         startActivity(intent);
                     }
                 }
@@ -156,6 +178,29 @@ public class CheckOutActivity extends AppCompatActivity  {
             }
         });
 
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode== Activity.RESULT_OK){
+            assert data !=null;
+            if (data.getSerializableExtra(AddressActivity.ADDRESS_SELECTED_KEY)!= null){
+                showSelectedAddress((Address) data.getSerializableExtra(AddressActivity.ADDRESS_SELECTED_KEY));
+            }
+        }
+    }
+
+
+
+
+    private void showSelectedAddress(Address address){
+        addressData= address;
+        emptyAddress.setVisibility(View.GONE);
+        cityStreet.setText(addressData.getCity()+" "+ addressData.getStreet());
+        province.setText(addressData.getProvince());
+        addressLL.setVisibility(View.VISIBLE);
     }
 
     public void onRadioButtonClicked(View view) {
@@ -185,7 +230,7 @@ public class CheckOutActivity extends AppCompatActivity  {
             @Override
             public void onSuccess(@NonNull Map<String, Object> data) {
                 Log.i("success", data.toString());
-                confirmOrder("Khalti", 1);
+                confirmOrder("Khalti", 1,addressData.getId());
             }
         })
                 .paymentPreferences(new ArrayList<PaymentPreference>() {{

@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:backgroundTint="#8A8585"
         android:gravity="center_vertical">
 
         <ImageView
@@ -31,64 +32,107 @@
             android:gravity="center_horizontal"
             android:text="Food Details"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="20dp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
-    <com.google.android.material.imageview.ShapeableImageView
-        android:layout_width="wrap_content"
-        android:id="@+id/food_img"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:shapeAppearanceOverlay="@style/rounded_corner"
-        android:src="@drawable/ic_launcher_background"/>
+        android:padding="15dp"
+        android:background="@drawable/category_bg">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/food_img"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_launcher_background"
+            app:shapeAppearanceOverlay="@style/rounded_corner" />
+
+        <LinearLayout
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/food_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Burger"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/food_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THis is description for food table about burger."
+                android:textColor="@color/black" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/food_price"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingRight="18dp"
+                    android:text="Rs 200"
+                    android:textColor="@color/red" />
+
+                <Button
+                    android:id="@+id/tocart"
+                    android:layout_width="59dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_border"
+                    android:text="+" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/order"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:paddingBottom="-10dp"
+                    android:src="@drawable/cart" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Now"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/food_name"
-        android:text="Burger"
-        android:textSize="18dp"
+        android:text="More Foods"
+        android:padding="10dp"
+        android:textSize="19dp"
         android:textColor="@color/black"
         android:textStyle="bold"/>
-    <TextView
-        android:layout_width="wrap_content"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/food_desc"
-        android:text="THis is description for food table about burger."/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:padding="10dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/food_price"
-            android:paddingRight="18dp"
-            android:text="Rs 200"/>
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/tocart"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:text="+"
-            android:background="@drawable/button_border"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/order">
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/cart"
-        android:paddingBottom="-10dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Order Now"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
-    </LinearLayout>
+        android:id="@+id/jpt"/>
 
 </LinearLayout>

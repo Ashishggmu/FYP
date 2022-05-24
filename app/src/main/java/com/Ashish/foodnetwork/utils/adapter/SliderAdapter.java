@@ -35,6 +35,8 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.ViewHolder> {
     public int getCount() {
         return images.length;
     }
+
+
     public class ViewHolder extends SliderViewAdapter.ViewHolder{
             ImageView imageView;
         public ViewHolder(View itemView) {

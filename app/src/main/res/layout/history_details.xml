@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/Picture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/cart" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="13dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="      Name"
+            android:textColor="@color/green" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Quantity"
+            android:text="Quantity"
+            android:textColor="@color/green"
+            android:layout_weight="0.5"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/price"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textColor="@color/green"
+            android:text="Price"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:id="@+id/productIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/face" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_spacing"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/productNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Dulla Shoes"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/PriceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="Rs. 8000"
+                android:textColor="@color/orange"
+                android:textSize="16sp" />
+
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/quantityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_spacing"
+            android:maxLines="2"
+            android:text="10 Units"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

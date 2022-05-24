@@ -216,7 +216,11 @@ public class HomeFragment extends Fragment implements ItemAdapter.EachItemClick,
                     if(!response.body().getError()){
                         Toast.makeText(getContext(),response.body().getMessage(),Toast.LENGTH_LONG).show();
                     }
+                    else {
+                        Toast.makeText(getContext(),"Food already Exist", Toast.LENGTH_SHORT).show();
+                    }
                 }
+
             }
 
             @Override

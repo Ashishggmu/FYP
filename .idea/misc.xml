@@ -3,8 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-hdpi/ic_round_close_24.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-hdpi/ic_time.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-hdpi/ic_undraw_order_confirmed_re_g0if.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-hdpi/strike.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-v24/ic_baseline_add_circle_outline_24.xml" value="0.290625" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-v24/ic_baseline_camera_alt_24.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-v24/ic_baseline_category_24.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-v24/ic_baseline_image_24.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-v24/ic_baseline_local_shipping_24.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-v24/ic_baseline_location_on_24.xml" value="0.1" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.290625" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-v24/ic_round_add_24.xml" value="0.1" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-v24/ic_round_arrow_back_ios_new_24.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable-v24/rect.xml" value="0.1" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable/box_shape.xml" value="0.1" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable/box_shape_selected.xml" value="0.1" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable/button_border.xml" value="0.290625" />
@@ -18,24 +30,44 @@
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable/order.xml" value="0.2101851851851852" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable/rectangle_box.xml" value="0.1" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/drawable/searchview.xml" value="0.16944444444444445" />
-        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_check_out.xml" value="0.2842227378190255" />
-        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_food_details.xml" value="0.2703804347826087" />
-        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_about_us.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_add_address.xml" value="0.2477355072463768" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_add_product.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_address.xml" value="0.23747680890538034" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_admin.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_check_out.xml" value="0.2" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_food_details.xml" value="0.2" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_home.xml" value="0.24572649572649571" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_list_category.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_list_products.xml" value="0.1" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_order_complete.xml" value="0.33796296296296297" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_order_history_details.xml" value="0.264" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_signup.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_termsand_condition.xml" value="0.11018518518518519" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/activity_user_account.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/add_tocart.xml" value="0.8" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/add_tocart.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/admin_category.xml" value="0.2" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/category_items.xml" value="0.4" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/custom_dialog_add_category.xml" value="0.264" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/dimens.xml" value="0.1" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/food_items.xml" value="0.4" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/fragment_cart.xml" value="0.176" />
-        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/fragment_home.xml" value="0.136" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/fragment_history.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/fragment_login.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/fragment_profile.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/fragment_search.xml" value="0.1" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/fragment_sign_up.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/history_details.xml" value="0.4" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/item_add_category.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/item_address.xml" value="0.536" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/item_image.xml" value="0.1" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/item_product_admin.xml" value="0.536" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/items.xml" value="0.2" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/layout_bill.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/order_history.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/order_history.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/order_history_details.xml" value="0.23183925811437403" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/layout/slider_item.xml" value="0.1" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/menu/menu.xml" value="0.2713541666666667" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/FoodNetwork/app/src/main/res/menu/nav_menu.xml" value="0.18333333333333332" />
